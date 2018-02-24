@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>uthai_gazebo</name>
+  <version>0.0.1</version>
+  <description>ROS packages for the uthai_gazebo package</description>
+  <license>BSD</license>
+  <maintainer email="sweilz.w@gmail.com">sweilz</maintainer>
+  <!-- <author email="....@......com">some one</author> -->
+  <url type="repository">https://github.com/UTHAI-Humanoid/UTHAI-Common</url>
+  <buildtool_depend>catkin</buildtool_depend>
+  <export></export>
+</package>

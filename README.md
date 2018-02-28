@@ -6,5 +6,5 @@
 
 Convert `.xacro` file to `.urdf` file.
 ```ros
-rosrun xacro xacro.py model.xacro > model.urdf
+rosrun xacro xacro --inorder -o model.urdf model.xacro
 ```

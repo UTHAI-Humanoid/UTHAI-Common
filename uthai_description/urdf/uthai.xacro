@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<robot name="uthai" 
+    xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <xacro:property name="pi" value="3.141592654"/>
+    <!-- Import Rviz colors -->
+    <xacro:include filename="$(find uthai_description)/urdf/materials.xacro" />
+    <!-- Used for fixing robot -->
+    <link name="world"></link>
+    <joint name="world_fixed" type="fixed">
+        <origin xyz="0 0 0.75" rpy="0 0 0"/>
+        <parent link="world"/>
+        <child link="base"/>
+    </joint>
+    <link name="base"></link>
+    <joint name="base_fixed" type="fixed">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="base"/>
+        <child link="pelvis_link"/>
+    </joint>
+    <!-- pelvis_link -->
+    <link name="pelvis_link">
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://uthai_description/meshes/pelvis.STL"/>
+            </geometry>
+        </collision>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <mesh filename="package://uthai_description/meshes/pelvis.STL"/>
+            </geometry>
+            <material name="grey"/>
+        </visual>
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <mass value="6.869"/>
+            <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
+            <!--<inertia ixx="0.03603" ixy="0.0" ixz="0.00016" iyy="0.02210" iyz="0.0" izz="0.03830" />-->
+        </inertial>
+    </link>
+    <!-- imu joint -->
+    <joint name="imu_fixed" type="fixed">
+        <parent link="pelvis_link"/>
+        <child link="imu_link"/>
+        <origin xyz="0.0 0 0.45" rpy="0 0 0"/>
+    </joint>
+    <link name="imu_link"></link>
+</robot>

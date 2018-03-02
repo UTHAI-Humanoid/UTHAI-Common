@@ -7,7 +7,7 @@
     <xacro:include filename="$(find uthai_description)/urdf/uthai_leg.xacro" />
     <xacro:include filename="$(find uthai_description)/urdf/uthai.gazebo" />
     <!-- Used for fixing robot -->
-    <link name="world"></link>
+    <!--<link name="world"></link>
     <joint name="world_fixed" type="fixed">
         <origin xyz="0 0 0.756" rpy="0 0 0"/>
         <parent link="world"/>
@@ -18,7 +18,7 @@
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <parent link="base"/>
         <child link="pelvis_link"/>
-    </joint>
+    </joint>-->
     <!-- pelvis_link -->
     <link name="pelvis_link">
         <collision>

@@ -20,7 +20,7 @@
             <origin xyz="0.008 0.09 -0.06" rpy="0 0 ${pi/2}"/>
             <parent link="${parent}"/>
             <child link="l_hip_yaw_link"/>
-            <limit effort="10" lower="${-pi*0.9}" upper="${pi*0.9}" velocity="5.6548668"/>
+            <limit effort="20" lower="${-pi*0.9}" upper="${pi*0.9}" velocity="10"/>
             <dynamics damping="0.1" friction="0.0"/>
         </joint>
         <xacro:insert_transmission name="l_hip_yaw_joint"/>
@@ -48,7 +48,7 @@
             <origin xyz="0 0 -0.036" rpy="${pi/2} 0 0"/>
             <parent link="l_hip_yaw_link"/>
             <child link="l_hip_roll_link"/>
-            <limit effort="10" lower="${-pi*0.9}" upper="${pi*0.9}" velocity="5.6548668"/>
+            <limit effort="20" lower="${-pi*0.9}" upper="${pi*0.9}" velocity="10"/>
             <dynamics damping="0.1" friction="0.0"/>
         </joint>
         <xacro:insert_transmission name="l_hip_roll_joint"/>
@@ -76,7 +76,7 @@
             <origin xyz="0 0 -0.004" rpy="${-pi/2} 0 ${-pi/2}"/>
             <parent link="l_hip_roll_link"/>
             <child link="l_hip_pitch_link"/>
-            <limit effort="10" lower="${-pi*0.9}" upper="${pi*0.9}" velocity="5.6548668"/>
+            <limit effort="20" lower="${-pi*0.9}" upper="${pi*0.9}" velocity="10"/>
             <dynamics damping="0.1" friction="0.0"/>
         </joint>
         <xacro:insert_transmission name="l_hip_pitch_joint"/>
@@ -104,7 +104,7 @@
             <origin xyz="0.3 0 0" rpy="0 0 0"/>
             <parent link="l_hip_pitch_link"/>
             <child link="l_knee_pitch_link"/>
-            <limit effort="10" lower="${-pi*0.9}" upper="${pi*0.9}" velocity="5.6548668"/>
+            <limit effort="20" lower="${-pi*0.9}" upper="${pi*0.9}" velocity="10"/>
             <dynamics damping="0.1" friction="0.0"/>
         </joint>
         <xacro:insert_transmission name="l_knee_pitch_joint"/>
@@ -132,7 +132,7 @@
             <origin xyz="0.315 0 0" rpy="0 0 0"/>
             <parent link="l_knee_pitch_link"/>
             <child link="l_ankle_pitch_link"/>
-            <limit effort="10" lower="${-pi*0.9}" upper="${pi*0.9}" velocity="5.6548668"/>
+            <limit effort="20" lower="${-pi*0.9}" upper="${pi*0.9}" velocity="10"/>
             <dynamics damping="0.1" friction="0.0"/>
         </joint>
         <xacro:insert_transmission name="l_ankle_pitch_joint"/>
@@ -160,7 +160,7 @@
             <origin xyz="0 0 0" rpy="${pi/2} 0 0"/>
             <parent link="l_ankle_pitch_link"/>
             <child link="l_ankle_roll_link"/>
-            <limit effort="10" lower="${-pi*0.9}" upper="${pi*0.9}" velocity="5.6548668"/>
+            <limit effort="20" lower="${-pi*0.9}" upper="${pi*0.9}" velocity="10"/>
             <dynamics damping="0.1" friction="0.0"/>
         </joint>
         <xacro:insert_transmission name="l_ankle_roll_joint"/>
@@ -177,9 +177,9 @@
                 <material name="grey"/>
             </visual>
             <inertial>
-                <origin xyz="0.03576926 -0.08779574 -0.00045842"/>
+                           <origin xyz="0.03625957 -0.00019537 0.00037602"/>
                 <mass value="0.10500000"/>
-                <inertia ixx="0.00123572" ixy="0.00000500" ixz="0.00000812" iyy="0.00031773" iyz="0.00000828" izz="0.00094763" />
+                <inertia ixx="0.00034590" ixy="-0.00000013" ixz="0.00000857" iyy="0.00032704" iyz="0.00000120" izz="0.00004812" />
             </inertial>
         </link>
         <!-- left ft fixed joint -->
@@ -198,7 +198,7 @@
             <origin xyz="0.008 -0.09 -0.06" rpy="0 0 ${-pi/2}"/>
             <parent link="${parent}"/>
             <child link="r_hip_yaw_link"/>
-            <limit effort="10" lower="${-pi*0.9}" upper="${pi*0.9}" velocity="5.6548668"/>
+            <limit effort="20" lower="${-pi*0.9}" upper="${pi*0.9}" velocity="10"/>
             <dynamics damping="0.1" friction="0.0"/>
         </joint>
         <xacro:insert_transmission name="r_hip_yaw_joint"/>
@@ -226,7 +226,7 @@
             <origin xyz="0 0 -0.036" rpy="${pi/2} 0 ${pi}"/>
             <parent link="r_hip_yaw_link"/>
             <child link="r_hip_roll_link"/>
-            <limit effort="10" lower="${-pi*0.9}" upper="${pi*0.9}" velocity="5.6548668"/>
+            <limit effort="20" lower="${-pi*0.9}" upper="${pi*0.9}" velocity="10"/>
             <dynamics damping="0.1" friction="0.0"/>
         </joint>
         <xacro:insert_transmission name="r_hip_roll_joint"/>
@@ -254,7 +254,7 @@
             <origin xyz="0 0 -0.004" rpy="${-pi/2} 0 ${-pi/2}"/>
             <parent link="r_hip_roll_link"/>
             <child link="r_hip_pitch_link"/>
-            <limit effort="10" lower="${-pi*0.9}" upper="${pi*0.9}" velocity="5.6548668"/>
+            <limit effort="20" lower="${-pi*0.9}" upper="${pi*0.9}" velocity="10"/>
             <dynamics damping="0.1" friction="0.0"/>
         </joint>
         <xacro:insert_transmission name="r_hip_pitch_joint"/>
@@ -282,7 +282,7 @@
             <origin xyz="0.3 0 0" rpy="0 0 0"/>
             <parent link="r_hip_pitch_link"/>
             <child link="r_knee_pitch_link"/>
-            <limit effort="10" lower="${-pi*0.9}" upper="${pi*0.9}" velocity="5.6548668"/>
+            <limit effort="20" lower="${-pi*0.9}" upper="${pi*0.9}" velocity="10"/>
             <dynamics damping="0.1" friction="0.0"/>
         </joint>
         <xacro:insert_transmission name="r_knee_pitch_joint"/>
@@ -310,7 +310,7 @@
             <origin xyz="0.315 0 0" rpy="0 0 0"/>
             <parent link="r_knee_pitch_link"/>
             <child link="r_ankle_pitch_link"/>
-            <limit effort="10" lower="${-pi*0.9}" upper="${pi*0.9}" velocity="5.6548668"/>
+            <limit effort="20" lower="${-pi*0.9}" upper="${pi*0.9}" velocity="10"/>
             <dynamics damping="0.1" friction="0.0"/>
         </joint>
         <xacro:insert_transmission name="r_ankle_pitch_joint"/>
@@ -338,7 +338,7 @@
             <origin xyz="0 0 0" rpy="${pi/2} 0 0"/>
             <parent link="r_ankle_pitch_link"/>
             <child link="r_ankle_roll_link"/>
-            <limit effort="10" lower="${-pi*0.9}" upper="${pi*0.9}" velocity="5.6548668"/>
+            <limit effort="20" lower="${-pi*0.9}" upper="${pi*0.9}" velocity="10"/>
             <dynamics damping="0.1" friction="0.0"/>
         </joint>
         <xacro:insert_transmission name="r_ankle_roll_joint"/>
@@ -355,9 +355,9 @@
                 <material name="grey"/>
             </visual>
             <inertial>
-                <origin xyz="0.03576926 -0.08779574 -0.00045842"/>
+                            <origin xyz="0.03625957 -0.00019537 0.00037602"/>
                 <mass value="0.10500000"/>
-                <inertia ixx="0.00123572" ixy="0.00000500" ixz="0.00000812" iyy="0.00031773" iyz="0.00000828" izz="0.00094763" />
+                <inertia ixx="0.00034590" ixy="-0.00000013" ixz="0.00000857" iyy="0.00032704" iyz="0.00000120" izz="0.00004812" />
             </inertial>
         </link>
         <!-- right ft fixed joint -->

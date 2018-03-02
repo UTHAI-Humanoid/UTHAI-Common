@@ -182,6 +182,14 @@
                 <inertia ixx="0.00123572" ixy="0.00000500" ixz="0.00000812" iyy="0.00031773" iyz="0.00000828" izz="0.00094763" />
             </inertial>
         </link>
+        <!-- left ft fixed joint -->
+        <joint name="l_ft_fixed" type="fixed">
+            <origin xyz="0.05 0.0 0.0" rpy="0 ${-pi/2} 0"/>
+            <parent link="l_ankle_roll_link"/>
+            <child link="l_foot_ft_link"/>
+        </joint>
+        <!-- left foot ft link -->
+        <link name="l_foot_ft_link"></link>
     </xacro:macro>
     <xacro:macro name="uthai_right_leg" params="parent">
         <!-- right hip yaw -->
@@ -352,5 +360,13 @@
                 <inertia ixx="0.00123572" ixy="0.00000500" ixz="0.00000812" iyy="0.00031773" iyz="0.00000828" izz="0.00094763" />
             </inertial>
         </link>
+        <!-- right ft fixed joint -->
+        <joint name="r_ft_fixed" type="fixed">
+            <origin xyz="0.05 0.0 0.0" rpy="0 ${-pi/2} 0"/>
+            <parent link="r_ankle_roll_link"/>
+            <child link="r_foot_ft_link"/>
+        </joint>
+        <!-- right foot ft link -->
+        <link name="r_foot_ft_link"></link>
     </xacro:macro>
 </robot>

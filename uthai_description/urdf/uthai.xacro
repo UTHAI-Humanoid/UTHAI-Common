@@ -5,6 +5,7 @@
     <!-- Import Rviz colors -->
     <xacro:include filename="$(find uthai_description)/urdf/materials.xacro" />
     <xacro:include filename="$(find uthai_description)/urdf/uthai_leg.xacro" />
+    <xacro:include filename="$(find uthai_description)/urdf/uthai.gazebo" />
     <!-- Used for fixing robot -->
     <link name="world"></link>
     <joint name="world_fixed" type="fixed">

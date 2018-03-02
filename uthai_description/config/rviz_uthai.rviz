@@ -68,6 +68,16 @@ Visualization Manager:
           Alpha: 1
           Show Axes: false
           Show Trail: false
+        l_hip_roll_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        l_hip_yaw_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
         pelvis_link:
           Alpha: 1
           Show Axes: false
@@ -92,6 +102,10 @@ Visualization Manager:
           Value: true
         imu_link:
           Value: true
+        l_hip_roll_link:
+          Value: true
+        l_hip_yaw_link:
+          Value: true
         pelvis_link:
           Value: true
         world:
@@ -100,13 +114,16 @@ Visualization Manager:
       Name: TF
       Show Arrows: true
       Show Axes: true
-      Show Names: true
+      Show Names: false
       Tree:
         world:
           base:
             pelvis_link:
               imu_link:
                 {}
+              l_hip_yaw_link:
+                l_hip_roll_link:
+                  {}
       Update Interval: 0
       Value: true
   Enabled: true
@@ -134,7 +151,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 2.9223721
+      Distance: 0.621195376
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.0599999987
         Stereo Focal Distance: 1
@@ -149,10 +166,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Pitch: 0.680398345
+      Pitch: 0.370398581
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 5.78358412
+      Yaw: 0.405399859
     Saved: ~
 Window Geometry:
   Displays:

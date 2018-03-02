@@ -4,10 +4,11 @@
     <xacro:property name="pi" value="3.141592654"/>
     <!-- Import Rviz colors -->
     <xacro:include filename="$(find uthai_description)/urdf/materials.xacro" />
+    <xacro:include filename="$(find uthai_description)/urdf/uthai_leg.xacro" />
     <!-- Used for fixing robot -->
     <link name="world"></link>
     <joint name="world_fixed" type="fixed">
-        <origin xyz="0 0 0.75" rpy="0 0 0"/>
+        <origin xyz="0 0 0.756" rpy="0 0 0"/>
         <parent link="world"/>
         <child link="base"/>
     </joint>
@@ -33,10 +34,9 @@
             <material name="grey"/>
         </visual>
         <inertial>
-            <origin xyz="0 0 0" rpy="0 0 0"/>
-            <mass value="6.869"/>
-            <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0" />
-            <!--<inertia ixx="0.03603" ixy="0.0" ixz="0.00016" iyy="0.02210" iyz="0.0" izz="0.03830" />-->
+            <origin xyz="-0.00562901 0.00000232 -0.02326557"/>
+            <mass value="0.664564"/>
+            <inertia ixx="0.00504607" ixy="-0.00000002" ixz="-0.00000322" iyy="0.00052209" iyz="0.00000002" izz="0.00510184" />
         </inertial>
     </link>
     <!-- imu joint -->
@@ -46,4 +46,6 @@
         <origin xyz="0.0 0 0.45" rpy="0 0 0"/>
     </joint>
     <link name="imu_link"></link>
+    <xacro:uthai_left_leg parent="pelvis_link"/>
+    <xacro:uthai_right_leg parent="pelvis_link"/>
 </robot>

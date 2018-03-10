@@ -3,80 +3,80 @@
     xmlns:xacro="http://www.ros.org/wiki/xacro">
     <!-- body link -->
     <xacro:macro name="insert_inertia_pelvis_link">
-        <origin xyz="-0.01501 0.00013 0.06582" />
-        <mass value="1.34928"/>
-        <inertia ixx="0.00340499" ixy="0.00000572" ixz="-0.00004256" iyy="0.00296939" iyz="-0.00000059" izz="0.00317331" />
+        <origin xyz="-0.00557436 0.00000000 -0.02356598"/>
+        <mass value="0.86500000"/>
+        <inertia ixx="0.00656431" ixy="-0.00000003" ixz="-0.00000466" iyy="0.00067608" iyz="0.00000000" izz="0.00664141" />
     </xacro:macro>
     <!-- right hip yaw link -->
     <xacro:macro name="insert_inertia_r_hip_yaw_link">
-        <origin xyz="-0.00157 0.00000 -0.00774" />
-        <mass value="0.01181"/>
-        <inertia ixx="0.00000151" ixy="0.0" ixz="0.00000001" iyy="0.00000430" iyz="0.0" izz="0.00000412" />
+        <origin xyz="0.00000000 -0.02500000 -0.00735017" />
+        <mass value="0.09100000"/>
+        <inertia ixx="0.00014158" ixy="0.00000000" ixz="0.00000000" iyy="0.00002022" iyz="0.00000000" izz="0.00014316" />
     </xacro:macro>
     <!-- right hip roll link -->
     <xacro:macro name="insert_inertia_r_hip_roll_link">
-        <origin xyz="0.00388 -0.00028 -0.01214" />
-        <mass value="0.17886"/>
-        <inertia ixx="0.00004661" ixy="0.00000101" ixz="-0.00000131" iyy="0.00012523" iyz="0.00000006" izz="0.00010857" />
+        <origin xyz="0.00000000 -0.01526210 -0.02652545" />
+        <mass value="0.34300000"/>
+        <inertia ixx="0.00032449" ixy="0.00000081" ixz="0.00000000" iyy="0.00026847" iyz="0.00000219" izz="0.00014760" />
     </xacro:macro>
     <!-- right hip pitch link -->
     <xacro:macro name="insert_inertia_r_hip_pitch_link">
-        <origin xyz="0.00059 0.01901 -0.08408" />
-        <mass value="0.11543"/>
-        <inertia ixx="0.00010499" ixy="0.00000001" ixz="-0.00000071" iyy="0.00009613" iyz="-0.00000353" izz="0.00002493" />
+        <origin xyz="0.22137989 0.00000000 0.00000000" />
+        <mass value="0.31800000"/>
+        <inertia ixx="0.00011525" ixy="0.00000000" ixz="0.00000078" iyy="0.00254669" iyz="0.00000000" izz="0.00250848" />
     </xacro:macro>
     <!-- right knee link -->
     <xacro:macro name="insert_inertia_r_knee_pitch_link">
-        <origin xyz="0.00000 0.02151 -0.05500" />
-        <mass value="0.04015"/>
-        <inertia ixx="0.00003715" ixy="0.0" ixz="0.0" iyy="0.00002751" iyz="0.0" izz="0.00001511" />
+        <origin xyz="0.16288218 0.00000000 0.00000000" />
+        <mass value="0.15100000"/>
+        <inertia ixx="0.00006340" ixy="0.0" ixz="0.0" iyy="0.00139612" iyz="0.0" izz="0.00136731" />
     </xacro:macro>
     <!-- right ankle pitch link -->
     <xacro:macro name="insert_inertia_r_ankle_pitch_link">
-        <origin xyz="-0.02022 0.01872 0.01214" />
-        <mass value="0.17886"/>
-        <inertia ixx="0.00004661" ixy="0.00000101" ixz="0.00000131" iyy="0.00012523" iyz="-0.00000006" izz="0.00010857" />
+        <origin xyz="-0.01526210 0.02152545 0.00000000" />
+        <mass value="0.34300000"/>
+        <inertia ixx="0.00026847" ixy="-0.00000219" ixz="-0.00000081" iyy="0.00014760" iyz="0.00000000" izz="0.00032449" />
     </xacro:macro>
     <!-- right ankle roll link -->
     <xacro:macro name="insert_inertia_r_ankle_roll_link">
-        <origin xyz="0.02373 -0.01037 -0.02760" />
-        <mass value="0.06934"/>
-        <inertia ixx="0.00004034" ixy="0.00000019" ixz="0.00000012" iyy="0.00007874" iyz="-0.00000101" izz="0.00011579" />
+        <origin xyz="0.03625882 -0.00019548 0.00034576" />
+        <mass value="0.10500000"/>
+        <inertia ixx="0.00034591" ixy="-0.00000013" ixz="0.00000857" iyy="0.00032705" iyz="0.00000120" izz="0.00004813" />
     </xacro:macro>
     <!-- left hip yaw link -->
     <xacro:macro name="insert_inertia_l_hip_yaw_link">
-        <origin xyz="-0.00157 0.00000 -0.00774" />
-        <mass value="0.01181"/>
-        <inertia ixx="0.00000151" ixy="0.0" ixz="0.00000001" iyy="0.00000430" iyz="0.0" izz="0.00000412" />
+        <origin xyz="0.00000000 0.02500000 -0.00735017" />
+        <mass value="0.09100000"/>
+        <inertia ixx="0.00014158" ixy="0.0" ixz="0.0" iyy="0.00002022" iyz="0.0" izz="0.00014316" />
     </xacro:macro>
     <!-- left hip roll link -->
     <xacro:macro name="insert_inertia_l_hip_roll_link">
-        <origin xyz="0.00388 0.00028 -0.01214" />
-        <mass value="0.17886"/>
-        <inertia ixx="0.00004661" ixy="-0.00000101" ixz="-0.00000131" iyy="0.00012523" iyz="-0.00000006" izz="0.00010857" />
+        <origin xyz="0.00000000 -0.01526210 -0.02652545" />
+        <mass value="0.34300000"/>
+        <inertia ixx="0.00032449" ixy="-0.00000081" ixz="0.00000000" iyy="0.00026847" iyz="0.00000219" izz="0.00014760" />
     </xacro:macro>
     <!-- left hip pitch link -->
     <xacro:macro name="insert_inertia_l_hip_pitch_link">
-        <origin xyz="0.00059 -0.01901 -0.08408" />
-        <mass value="0.11543"/>
-        <inertia ixx="0.00010499" ixy="-0.00000001" ixz="-0.00000071" iyy="0.00009613" iyz="0.00000353" izz="0.00002493" />
+        <origin xyz="0.22137989 0.00000000 0.00000000" />
+        <mass value="0.31800000"/>
+        <inertia ixx="0.00011525" ixy="0.00000000" ixz="0.00000078" iyy="0.00254669" iyz="0.00000000" izz="0.00250848" />
     </xacro:macro>
     <!-- left knee link -->
     <xacro:macro name="insert_inertia_l_knee_pitch_link">
-        <origin xyz="0.00000 -0.02151 -0.05500" />
-        <mass value="0.04015"/>
-        <inertia ixx="0.00003715" ixy="0.0" ixz="0.0" iyy="0.00002751" iyz="0.0" izz="0.00001511" />
+        <origin xyz="0.16288218 0.00000000 0.00000000" />
+        <mass value="0.15100000"/>
+        <inertia ixx="0.00006340" ixy="0.0" ixz="0.0" iyy="0.00139612" iyz="0.0" izz="0.00136731" />
     </xacro:macro>
     <!-- left ankle pitch link -->
     <xacro:macro name="insert_inertia_l_ankle_pitch_link">
-        <origin xyz="-0.02022 -0.01872 0.01214" />
-        <mass value="0.17886"/>
-        <inertia ixx="0.00004661" ixy="-0.00000101" ixz="0.00000131" iyy="0.00012523" iyz="0.00000006" izz="0.00010857" />
+        <origin xyz="-0.01526210 0.02152545 0.00000000" />
+        <mass value="0.34300000"/>
+        <inertia ixx="0.00026847" ixy="-0.00000219" ixz="-0.00000081" iyy="0.00014760" iyz="0.00000000" izz="0.00032449" />
     </xacro:macro>
     <!-- left ankle roll link -->
     <xacro:macro name="insert_inertia_l_ankle_roll_link">
-        <origin xyz="0.02373 0.01037 -0.02760" />
-        <mass value="0.06934"/>
-        <inertia ixx="0.00004034" ixy="-0.00000019" ixz="0.00000012" iyy="0.00007874" iyz="0.00000101" izz="0.00011579" />
+        <origin xyz="0.03608455 0.00020160 0.00002697" />
+        <mass value="0.10500000"/>
+        <inertia ixx="0.00034223" ixy="0.00000014" ixz="0.00000840" iyy="0.00032348" iyz="-0.00000118" izz="0.00004816" />
     </xacro:macro>
 </robot>

@@ -84,10 +84,11 @@
     <gazebo reference="l_ankle_roll_link">
         <kp>100000.0</kp>
         <kd>100.0</kd>
-        <mu1>9000</mu1>
-        <mu2>1.5</mu2>
-        <fdir1>1 0 0</fdir1>
-        <maxVel>1.0</maxVel>
+        <mu1>6000</mu1>
+        <mu2>6000</mu2>
+        <maxContacts>3</maxContacts>
+        <fdir1>1 1 1</fdir1>
+        <!-- <maxVel>1.0</maxVel> -->
         <minDepth>0.001</minDepth>
         <material>Gazebo/Grey</material>
     </gazebo>
@@ -125,11 +126,13 @@
     <gazebo reference="r_ankle_roll_link">
         <kp>100000.0</kp>
         <kd>100.0</kd>
-        <mu1>9000</mu1>
-        <mu2>1.5</mu2>
-        <fdir1>1 0 0</fdir1>
-        <maxVel>1.0</maxVel>
-        <minDepth>0.0</minDepth>
+        <mu1>6000</mu1>
+        <!-- <mu2>1.5</mu2> -->
+        <mu2>6000</mu2>
+        <maxContacts>3</maxContacts>
+        <fdir1>1 1 1</fdir1>
+        <!-- <maxVel>1.0</maxVel> -->
+        <minDepth>0.0001</minDepth>
         <material>Gazebo/Grey</material>
     </gazebo>
 </robot>

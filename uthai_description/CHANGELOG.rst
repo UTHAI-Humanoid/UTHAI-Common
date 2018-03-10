@@ -2,6 +2,13 @@
 Changelog for package uthai_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.0.4 (2018-03-11)
+-----------
+* redefine inertia
+* update stl file
+* add new dynamic properties
+* Contributors: Liews
+
 0.0.3 (2018-03-03)
 -----------
 * split xacro file for easy to modify

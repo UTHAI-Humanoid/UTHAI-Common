@@ -24,4 +24,5 @@
   <group if ="$(arg position_controller)">
     <include file="$(find uthai_gazebo)/launch/position_controller.launch" />
   </group>
+  <!-- <node name="uthai_walker" pkg="uthai_gazebo" type="walker.py" /> -->
 </launch>

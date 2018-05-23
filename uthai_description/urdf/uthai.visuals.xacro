@@ -2,10 +2,10 @@
 <robot 
     xmlns:xacro="http://www.ros.org/wiki/xacro">
     <!-- body link -->
-    <xacro:macro name="insert_mesh_pelvis_link">
+    <xacro:macro name="insert_mesh_base_link">
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-            <mesh filename="package://uthai_description/meshes/pelvis.STL" scale="1 1 1" />
+            <mesh filename="package://uthai_description/meshes/base.STL" scale="1 1 1" />
         </geometry>
         <material name="grey"/>
     </xacro:macro>

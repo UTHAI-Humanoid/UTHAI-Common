@@ -2,11 +2,10 @@
 
 import rospy
 from std_msgs.msg import Float64
-import time, math
-
+import time
 
 def main():
-    rospy.init_node("joint_control_node")
+    rospy.init_node("q_set_control_node")
     LAP = rospy.Publisher(
         'uthai/l_ankle_pitch_position/command', Float64, queue_size=10)
     LAR = rospy.Publisher(
@@ -32,56 +31,43 @@ def main():
     RKP = rospy.Publisher(
         'uthai/r_knee_pitch_position/command', Float64, queue_size=10)
 
-    q_set = [
-        [0, 0, -0.15, 0.3, -0.15, 0, 0, 0, -0.15, 0.3, -0.15, 0],
-        [0, 0, -0.6283, 1.2566, -0.6283, 0, 0, 0, -0.6283, 1.2566, -0.6283, 0]
-    ]
-
-    def post(q):
-        LHY.publish(q[0])
-        RHY.publish(q[1])
-        LAR.publish(q[2])
-        LHR.publish(q[3])
-        RAR.publish(q[4])
-        RHR.publish(q[5])
-
-        LHP.publish(q[6])
-        LKP.publish(q[7])
-        LAP.publish(q[8])
-        RHP.publish(q[9])
-        RKP.publish(q[10])
-        RAP.publish(q[11])
-        time.sleep(1)
-    post([0]*12)
-    time.sleep(5)
-
-    i = 0
-    while not rospy.is_shutdown():
+    with open('Q.csv', 'r') as csvfile:
+        spamreader = csvfile.read().split('\n')
+        i = 0
         
-        q_1 = math.pi/20*math.sin(i)
-        i+=0.0001
-        print(q_1)
-        RHR.publish(q_1)
-        LHR.publish(q_1)
-        RAR.publish(-q_1)
-        LAR.publish(-q_1)
-        # time.sleep(0.04)
+        for row in spamreader:
+            q_set = map(float, row.split(','))
+            RHY.publish(q_set[0])
+            RHR.publish(q_set[1])
+            RHP.publish(q_set[2])
+            RKP.publish(q_set[3])
+            RAP.publish(q_set[4])
+            RAR.publish(q_set[5])
 
-        # time.sleep(5)
-        # LHP.publish(-0.25)
-        # LKP.publish(0.5)
-        # LAP.publish(-0.25)
-        # RHP.publish(-0.25)
-        # RKP.publish(0.5)
-        # RAP.publish(-0.25)
-        # time.sleep(5)
-        # LHP.publish(-0.05)
-        # LKP.publish(0.1)
-        # LAP.publish(-0.05)
-        # RHP.publish(-0.05)
-        # RKP.publish(0.1)
-        # RAP.publish(-0.05)
-
+            LHY.publish(q_set[6])
+            LHR.publish(q_set[7])
+            LHP.publish(q_set[8])
+            LKP.publish(q_set[9])
+            LAP.publish(q_set[10])
+            LAR.publish(q_set[11])
+            print(i)
+            i = i + 1
+            if i==5 :
+                time.sleep(5)
+            time.sleep(0.2)
+    time.sleep(5)
+    RHY.publish(0)
+    RHR.publish(0)
+    RHP.publish(0)
+    RKP.publish(0)
+    RAP.publish(0)
+    RAR.publish(0)
+    LHY.publish(0)
+    LHR.publish(0)
+    LHP.publish(0)
+    LKP.publish(0)
+    LAP.publish(0)
+    LAR.publish(0)
 
 if __name__ == '__main__':
     main()
